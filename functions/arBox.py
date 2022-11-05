@@ -66,7 +66,7 @@ def prepare_sim(parms):
     ))
 
     global ar_traj
-    ar_traj = '/work/ar_liquid_traj' + str(parms['N']) + '.h5'
+    ar_traj = 'ar_liquid_traj' + str(parms['N']) + '.h5'
     # simulation.reporters.append(
     #     app.PDBReporter(ar_traj + '.pdb', parms['skip_steps'])
     # )
@@ -143,7 +143,7 @@ def gen_pair_dist():
         r=rmin+i*dr
         histo[i]=histo[i]/(2.*np.pi*r*r*dr*N*N/volume)/float(Nsteps)
 
-    Ar_file=open('/work/Ar_histo','w')
+    Ar_file=open('Ar_histo','w')
     NN=0.
     for i in range(nbins):
         r=rmin+i*dr

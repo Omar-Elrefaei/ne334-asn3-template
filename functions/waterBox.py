@@ -51,7 +51,7 @@ def prepare_sim(parms):
 
     #simulation.reporters.append(app.PDBReporter('h2o_liquid_traj.pdb', parms['skip_steps']))
     global waterbox_traj
-    waterbox_traj = '/work/h2o_liquid_traj.h5'
+    waterbox_traj = 'h2o_liquid_traj.h5'
     simulation.reporters.append(mdtraj.reporters.HDF5Reporter(waterbox_traj, parms['skip_steps']))
 
 def run_sim(parms):
@@ -121,11 +121,11 @@ def gen_pair_dist():
             OO_histo[i]=OO_histo[i]/(2.*np.pi*r*r*dr*N*N/volume)/float(Nsteps)
             OH_histo[i]=OH_histo[i]//(2.*np.pi*r*r*dr*N*N*4./volume)/float(Nsteps)
 
-    OO_file=open('/work/OO_histo','w')
+    OO_file=open('OO_histo','w')
     for i in range(nbins):
         OO_file.write(str(rmin+i*dr)+' '+str(OO_histo[i])+'\n')
     OO_file.close()
-    OH_file=open('/work/OH_histo','w')
+    OH_file=open('OH_histo','w')
     for i in range(nbins):
         OH_file.write(str(rmin+i*dr)+' '+str(OH_histo[i])+'\n')
     OH_file.close()

@@ -40,7 +40,7 @@ def check_parms(parms):
 
 def prepare_system(parms):
 
-    pdb = app.PDBFile("/work/water2.pdb")
+    pdb = app.PDBFile("water2.pdb")
     forcefield = app.ForceField('amber10.xml', 'tip3p.xml')
     nonbonded = app.CutoffNonPeriodic
 
@@ -87,7 +87,7 @@ def prepare_sim(parms):
 
     #Saves trajectory file to binary format
     global traj_filename
-    traj_filename = '/work/water2_' + parms['ensemble'] + '.h5'
+    traj_filename = 'water2_' + parms['ensemble'] + '.h5'
     simulation.reporters.append(mdtraj.reporters.HDF5Reporter(traj_filename, parms['skip_steps']))
 
 
