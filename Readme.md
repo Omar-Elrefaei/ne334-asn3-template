@@ -1,8 +1,18 @@
-Login first time from
+#### Welcome to your succinct guide on doing the thermo assignment without deepnote
+
+> This is a thing I whipped up really quickly, dm me on discord if anything is not working properly.
+
+Login first time to JupyterHub from the link on discord (I can't put it here for security reasons)
 
 Signup using any username and password (save them for later)
   - Trying to login for the first time creates your account
-  - You should be presented with a notebook to do the assignment.
+  - You should be presented with a notebook to do the assignment
+  - .... break a leg
+
+**NOTE: you should not need to run the `conda` commands like the original assignment. These commands take very long to execute, so I already installed them for everybody**
+
+
+---------------------------------
 
 
 If you already did some work in Deepnote and want to move it over:
